@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --or: #E8572A;
+  --go: #F0A500;
+  --ink: #0D1B2A;
+  --bl: #2F5496;
+  --mist: #F4F7FB;
+  --wh: #FFFFFF;
+  --t1: #0D1B2A;
+  --t2: #6B7A8D;
+  --t3: #9AA5B4;
+  --bdr: rgba(31, 56, 100, 0.1);
+  
+  --font-syne: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(-45deg, #f4f7fb, #e0e8f5, #d1def0, #e0e8f5);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  color: var(--t1);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Page Container - Desktop Layout */
+.page-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(31, 56, 100, 0.05);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typography Utility */
+.syne { font-family: var(--font-syne); font-weight: 800; }
+.mono { font-family: var(--font-mono); }
+.sans { font-family: var(--font-sans); }
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Inputs */
+input::placeholder {
+  color: var(--t3);
+  opacity: 0.7;
+}
