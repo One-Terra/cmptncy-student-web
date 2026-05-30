@@ -123,15 +123,20 @@ const DiagnosticTest = () => {
   const allVisibleAnswered = visibleQuestions.every(q => answers[q.id]);
 
   const handleNext = () => {
-    if (allVisibleAnswered && currentPageIndex + 1 < pages.length) {
-      const currentSection = pages[currentPageIndex][0].section;
-      const nextSection = pages[currentPageIndex + 1][0].section;
-      
-      if (currentSection !== nextSection) {
-        setNextSectionName(nextSection);
-        setShowSectionModal(true);
+    if (allVisibleAnswered) {
+      if (currentPageIndex + 1 < pages.length) {
+        const currentSection = pages[currentPageIndex][0].section;
+        const nextSection = pages[currentPageIndex + 1][0].section;
+        
+        if (currentSection !== nextSection) {
+          setNextSectionName(nextSection);
+          setShowSectionModal(true);
+        } else {
+          setCurrentPageIndex(currentPageIndex + 1);
+        }
       } else {
-        setCurrentPageIndex(currentPageIndex + 1);
+        // Finished the test
+        navigate('/diagnostic-results');
       }
     }
   };
@@ -153,6 +158,8 @@ const DiagnosticTest = () => {
       } else {
         setCurrentPageIndex(currentPageIndex + 1);
       }
+    } else {
+      navigate('/diagnostic-results');
     }
   };
 
