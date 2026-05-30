@@ -80,3 +80,11 @@
 .navCta:hover {
   background: rgba(255,255,255,0.1);
 }
+
+.navUser {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(244,247,251,0.45);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
