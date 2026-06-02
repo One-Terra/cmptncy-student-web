@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './ParentPage.module.css';
-import Navbar from './Navbar';
+import Navbar from "../layout/Navbar";
 
 const ParentPage = () => {
   const navigate = useNavigate();

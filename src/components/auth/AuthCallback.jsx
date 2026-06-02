@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { authApi } from '../services/api';
+import { authApi } from "../../services/api";
 
 const AuthCallback = () => {
   const navigate = useNavigate();

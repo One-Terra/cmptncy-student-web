@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './AuthPage.module.css';
-import { authApi, parentApi, sessionApi } from '../services/api';
-import Navbar from './Navbar';
+import { authApi, parentApi, sessionApi } from "../../services/api";
+import Navbar from "../layout/Navbar";
 
 const AuthPage = ({ mode = 'register' }) => {
   const navigate = useNavigate();

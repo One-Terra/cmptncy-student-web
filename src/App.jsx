@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import LandingPage from './components/LandingPage';
-import AuthPage from './components/AuthPage';
-import AuthCallback from './components/AuthCallback';
-import Dashboard from './components/Dashboard';
-import ParentPage from './components/ParentPage';
-import DiagnosticIntro from './components/DiagnosticIntro';
-import DiagnosticTest from './components/DiagnosticTest';
-import DiagnosticResults from './components/DiagnosticResults';
-import ReviewAnswers from './components/ReviewAnswers';
+import LandingPage from './components/landing/LandingPage';
+import AuthPage from './components/auth/AuthPage';
+import AuthCallback from './components/auth/AuthCallback';
+import Dashboard from './components/dashboard/Dashboard';
+import ParentPage from './components/parent/ParentPage';
+import DiagnosticIntro from './components/diagnostic/DiagnosticIntro';
+import DiagnosticTest from './components/diagnostic/DiagnosticTest';
+import DiagnosticResults from './components/diagnostic/DiagnosticResults';
+import ReviewAnswers from './components/diagnostic/ReviewAnswers';
 
 function App() {
   return (

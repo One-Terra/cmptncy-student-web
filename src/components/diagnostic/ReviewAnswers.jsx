@@ -12,7 +12,7 @@ const ReviewAnswers = () => {
   return (
     <div className={styles.container}>
       <nav className={styles.nav}>
-        <div className={styles.wm}>CMPTN<em>C</em>Y</div>
+        <div className={styles.wm} onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>CMPTN<em>C</em>Y</div>
         <div className={styles.navBack} onClick={() => navigate('/diagnostic-results')}>
           &larr; Results
         </div>

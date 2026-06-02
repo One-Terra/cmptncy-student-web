@@ -14,8 +14,8 @@ const DiagnosticResults = () => {
   return (
     <div className={styles.pageWrap}>
       <nav className={styles.nav}>
-        <div className={styles.wm}>CMPTN<em>C</em>Y</div>
-        <div className={styles.navRight}>Rahul &middot; Free</div>
+        <div className={styles.wm} onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>CMPTN<em>C</em>Y</div>
+        <div className={styles.navRight}>Akanksha &middot; Free</div>
       </nav>
 
       <div className={styles.onboardComplete}>
@@ -30,25 +30,27 @@ const DiagnosticResults = () => {
       <div className={styles.main}>
         {/* LEFT COL */}
         <div className={styles.leftCol}>
-          <div className={styles.hero}>
-            <div className={styles.eyebrow}>Your diagnostic results</div>
-            <h1 className={styles.headline}>Here's where<br />you <span className={styles.acc}>actually stand.</span></h1>
-            <p className={styles.sub}>Based on 38 questions across all 7 units. This is your starting point — not your ceiling.</p>
-          </div>
+          <div className={styles.heroScoreBox}>
+            <div className={styles.hero}>
+              <div className={styles.eyebrow}>Your diagnostic results</div>
+              <h1 className={styles.headline}>Here's where<br />you <span className={styles.acc}>actually stand.</span></h1>
+              <p className={styles.sub}>Based on 38 questions across all 7 units. This is your starting point — not your ceiling.</p>
+            </div>
 
-          <div className={styles.scoreStrip}>
-            <div className={styles.scoreRow}>
-              <div className={styles.scoreBox}>
-                <div className={styles.scoreVal}><span className={styles.acc}>62</span><span className={styles.fade}>/80</span></div>
-                <span className={styles.scoreUnit}>Predicted score</span>
-              </div>
-              <div className={styles.scoreBox}>
-                <div className={styles.scoreVal}>67<span className={styles.fade}>%</span></div>
-                <span className={styles.scoreUnit}>Mastery</span>
-              </div>
-              <div className={styles.scoreBoxBand}>
-                <div className={styles.bandVal}>Almost<br />Ready</div>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'rgba(240,165,0,0.5)', display: 'block', letterSpacing: '1px', textTransform: 'uppercase', marginTop: '8px', fontWeight: 600 }}>Readiness</span>
+            <div className={styles.scoreStrip}>
+              <div className={styles.scoreRow}>
+                <div className={styles.scoreBox}>
+                  <div className={styles.scoreVal}><span className={styles.acc}>62</span><span className={styles.fade}>/80</span></div>
+                  <span className={styles.scoreUnit}>Predicted score</span>
+                </div>
+                <div className={styles.scoreBox}>
+                  <div className={styles.scoreVal}>67<span className={styles.fade}>%</span></div>
+                  <span className={styles.scoreUnit}>Mastery</span>
+                </div>
+                <div className={styles.scoreBoxBand}>
+                  <div className={styles.bandVal}>Almost<br />Ready</div>
+                  <span style={{ fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'rgba(240,165,0,0.5)', display: 'block', letterSpacing: '1px', textTransform: 'uppercase', marginTop: '8px', fontWeight: 600 }}>Readiness</span>
+                </div>
               </div>
             </div>
           </div>

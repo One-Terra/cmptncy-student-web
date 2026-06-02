@@ -1,6 +1,6 @@
 /* PAGE LAYOUT */
 .pageWrap {
-  background: #0a0a1a;
+  background: linear-gradient(to bottom, var(--mist, #f4f7fb), #e6eef5);
   min-height: 100vh;
   padding: 0 48px 48px;
   font-family: 'Inter', sans-serif;
@@ -9,14 +9,14 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #0a0a1a;
+  background: var(--mist, #f4f7fb);
   padding-bottom: 24px;
 }
 
 .pageTitle {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(255,255,255,0.3);
+  color: var(--t3);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
@@ -43,8 +43,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(10, 10, 26, 0.85);
-  backdrop-filter: blur(8px);
+  background: rgba(244, 247, 251, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -52,57 +53,110 @@
 }
 
 .modalBox {
-  background: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #fff;
+  border: 1px solid rgba(31,56,100,0.06);
   padding: 48px;
-  border-radius: 12px;
+  border-radius: 24px;
   width: 480px;
   max-width: 90%;
   text-align: center;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalCheckIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(39, 174, 96, 0.1);
+  color: #27ae60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  border: 2px solid rgba(39, 174, 96, 0.2);
 }
 
 .modalEyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--go);
+  color: #27ae60;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-weight: 600;
 }
 
 .modalTitle {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-syne);
   font-size: 32px;
-  color: #fff;
-  margin: 0 0 16px 0;
-  font-weight: 600;
+  color: var(--bl);
+  margin: 0 0 32px 0;
+  font-weight: 800;
+  letter-spacing: -0.5px;
 }
 
-.modalDesc {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 15px;
-  line-height: 1.5;
+.modalNextSection {
+  background: rgba(244, 247, 251, 0.8);
+  border: 1px solid rgba(31,56,100,0.08);
+  border-radius: 16px;
+  padding: 24px;
+  width: 100%;
   margin-bottom: 32px;
 }
 
-.modalBtn {
-  background: var(--go);
-  color: #000;
-  border: none;
-  padding: 14px 32px;
-  font-size: 14px;
+.modalNextLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--or);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
   font-weight: 600;
-  border-radius: 8px;
+}
+
+.modalNextTitle {
+  font-family: var(--font-syne);
+  font-size: 24px;
+  color: var(--t1);
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.modalDesc {
+  color: var(--t2);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modalBtn {
+  background: var(--or);
+  color: #fff;
+  border: none;
+  padding: 16px 32px;
+  font-family: var(--font-syne);
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s;
   width: 100%;
+  box-shadow: 0 8px 24px rgba(232,87,42,0.25);
 }
 
 .modalBtn:hover {
-  background: #ff7f40;
+  background: #df4d20;
   transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(232,87,42,0.35);
+}
+
+.modalBtn:active {
+  transform: scale(0.98);
 }
 
 .bottomNavGrid {
@@ -116,7 +170,7 @@
 .lbl {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: #fff;
+  color: var(--t2);
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin-bottom: 12px;
@@ -157,7 +211,7 @@
 .navExit {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: rgba(244,247,251,0.45);
+  color: rgba(244,247,251,0.85);
   letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
@@ -183,14 +237,14 @@
 .progSection {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(244,247,251,0.55);
+  color: rgba(244,247,251,0.85);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 .progCount {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(244,247,251,0.4);
+  color: rgba(244,247,251,0.85);
 }
 .progBar {
   height: 4px;
@@ -213,7 +267,7 @@
 .eyDim {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(244,247,251,0.35);
+  color: rgba(244,247,251,0.7);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 6px;
@@ -521,9 +575,9 @@
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
-  color: #fff;
+  color: var(--t2);
   padding: 6px 12px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(31,56,100,0.2);
   border-radius: 4px;
   background: transparent;
   cursor: pointer;
@@ -532,13 +586,13 @@
   text-transform: uppercase;
 }
 .cardTopBtn:hover {
-  background: rgba(255,255,255,0.15);
-  color: #fff;
+  background: rgba(31,56,100,0.05);
+  color: var(--t1);
 }
 .cardTopClear {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: rgba(255,255,255,0.5);
+  color: var(--t3);
   letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
@@ -547,7 +601,7 @@
   padding: 6px 8px;
 }
 .cardTopClear:hover {
-  color: #fff;
+  color: var(--or);
 }
 .cardTopNext {
   background: var(--or);
@@ -559,14 +613,14 @@
   color: #fff;
 }
 .cardTopNext.off {
-  background: rgba(232,87,42,0.3);
+  background: rgba(232,87,42,0.1);
   cursor: not-allowed;
-  color: rgba(255,255,255,0.5);
+  color: rgba(232,87,42,0.5);
 }
 .cardTopSkip {
   font-family: var(--font-mono);
   font-size: 10px;
-  color: #fff;
+  color: var(--t2);
   letter-spacing: 1px;
   text-transform: uppercase;
   background: transparent;
@@ -575,7 +629,7 @@
   padding: 6px 8px;
 }
 .cardTopSkip:hover {
-  color: #fff;
+  color: var(--t1);
 }
 .btnGroup {
   display: flex;
