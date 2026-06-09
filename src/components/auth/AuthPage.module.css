@@ -20,8 +20,6 @@
   left: 0 !important;
   right: 0 !important;
   z-index: 1000 !important;
-  background: #060a18 !important;
-  border-bottom: 1px solid rgba(244, 247, 251, 0.05) !important;
 }
 
 .mainContent {
