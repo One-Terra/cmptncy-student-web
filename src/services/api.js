@@ -51,7 +51,8 @@ export const authApi = {
     return apiClient.get('/auth/google/login');
   },
   exchangeCode: async (code) => {
-    return apiClient.post('/auth/callback', { code });
+    const redirectUri = `${window.location.origin}/auth/callback`;
+    return apiClient.post('/auth/callback', { code, redirect_uri: redirectUri });
   }
 };
 
