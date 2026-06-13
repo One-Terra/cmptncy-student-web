@@ -35,7 +35,13 @@ const Navbar = ({ transparent, padding, containerClassName, className, user, tes
             </div>
           ) : user ? (
             <div className={styles.navUser}>
-              {user.name} &middot; {user.plan}
+              {user.name ? (
+                <span>{user.name}</span>
+              ) : (
+                <Link to="/register" className={styles.registerBtn}>Register</Link>
+              )}
+              <span>&middot;</span>
+              <span>{user.plan}</span>
             </div>
           ) : (
             <div className={styles.navLinks}>

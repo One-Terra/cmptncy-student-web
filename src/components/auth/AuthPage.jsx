@@ -29,7 +29,7 @@ const AuthPage = ({ mode = 'register' }) => {
         window.location.href = response.data.url;
       }
     } catch (err) {
-      setError('Failed to initiate Google login');
+      setError(err.response?.data?.message || err.response?.data?.detail || 'Failed to initiate Google login');
     }
   };
 
@@ -41,7 +41,7 @@ const AuthPage = ({ mode = 'register' }) => {
     try {
       if (isRegister) {
         // 1. Register
-        const authRes = await authApi.register(formData.email, formData.password);
+        const authRes = await authApi.register(formData.email, formData.password, formData.name, formData.parentEmail);
         const { user, session } = authRes.data;
         
         // Save tokens

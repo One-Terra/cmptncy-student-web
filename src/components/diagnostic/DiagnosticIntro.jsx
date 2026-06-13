@@ -72,7 +72,7 @@ const DiagnosticIntro = () => {
         )}
       </AnimatePresence>
 
-      <Navbar user={{ name: 'Akanksha', plan: 'Free' }} />
+      <Navbar user={{ plan: 'Free' }} />
 
       <div className={styles.progressTrackWrapper}>
         <div className={styles.progressTrack}>

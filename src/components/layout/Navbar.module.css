@@ -83,9 +83,40 @@
 }
 
 .navUser {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 11px;
   color: rgba(244,247,251,0.45);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+
+.registerBtn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: #F4F7FB;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--or);
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.2;
+  box-shadow: 0 4px 12px rgba(232, 87, 42, 0.2);
+}
+
+.registerBtn:hover {
+  background: #f06a3e;
+  box-shadow: 0 6px 16px rgba(232, 87, 42, 0.35);
+  transform: translateY(-1px);
+}
+
+.registerBtn:active {
+  transform: translateY(0);
+}
+
