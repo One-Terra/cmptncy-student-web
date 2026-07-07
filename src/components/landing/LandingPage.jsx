@@ -1,8 +1,9 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './LandingPage.module.css';
 import Navbar from "../layout/Navbar";
+import ChatWidget from '../layout/ChatWidget';
 
 
 const Reveal = ({ children, delay = 0, className = '' }) => (
@@ -287,6 +288,7 @@ const LandingPage = () => {
           </div>
         </div>
       </footer>
+      <ChatWidget />
     </div>
   );
 };
