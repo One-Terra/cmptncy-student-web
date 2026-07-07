@@ -310,6 +310,15 @@
   padding: 32px;
 }
 
+@media (max-width: 600px) {
+  .contentContainer {
+    padding: 16px;
+  }
+  .page {
+    padding: 20px;
+  }
+}
+
 .formHeader {
   margin-bottom: 24px;
   text-align: center;

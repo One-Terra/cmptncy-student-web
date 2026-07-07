@@ -45,8 +45,8 @@ const Navbar = ({ transparent, padding, containerClassName, className, user, tes
             </div>
           ) : (
             <div className={styles.navLinks}>
-              <a href="/#how-it-works" className={styles.navLink}>How it works</a>
-              <a href="/#pricing" className={styles.navLink}>Pricing</a>
+              <a href="/#how-it-works" className={`${styles.navLink} ${styles.mobileHide}`}>How it works</a>
+              <a href="/#pricing" className={`${styles.navLink} ${styles.mobileHide}`}>Pricing</a>
               <Link to="/parent-nomination" className={styles.navLink} style={isParentPage ? { color: 'rgba(244,247,251,0.8)' } : {}}>For parents</Link>
               <Link to="/login" className={styles.navCta}>Log in</Link>
             </div>

@@ -6,6 +6,10 @@ const Dashboard = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+    document.title = "Dashboard | CMPTNCY";
+  }, []);
+
+  useEffect(() => {
     const token = localStorage.getItem('access_token');
     if (!token) {
       navigate('/login');

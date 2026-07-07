@@ -5,6 +5,9 @@ import Navbar from "../layout/Navbar";
 
 const ParentPage = () => {
   const navigate = useNavigate();
+  React.useEffect(() => {
+    document.title = "Nominate Your Child | CMPTNCY";
+  }, []);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -58,7 +61,7 @@ const ParentPage = () => {
               </div>
               <div className={styles.step}>
                 <div className={styles.stepNum}>02</div>
-                <div className={styles.stepText}><strong>We send them a link</strong> — 22 questions, mirrors the real board paper, ~20 minutes</div>
+                <div className={styles.stepText}><strong>We send them a link</strong> — 20 questions, mirrors the real board paper, ~20 minutes</div>
               </div>
               <div className={styles.step}>
                 <div className={styles.stepNum}>03</div>
@@ -228,7 +231,7 @@ const ParentPage = () => {
                 <div className={styles.smStep}>
                   <div className={styles.smStepNum}>04</div>
                   <div className={styles.smStepText}>
-                    <strong>{formData.childName || 'They'} can register for free</strong> — take the full 38Q diagnostic and track all 95 concepts
+                    <strong>{formData.childName || 'They'} can register for free</strong> — take the 20Q board diagnostic and track all 95 concepts
                   </div>
                 </div>
               </div>

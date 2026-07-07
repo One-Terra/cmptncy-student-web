@@ -7,6 +7,10 @@ import Navbar from "../layout/Navbar";
 const AuthPage = ({ mode = 'register' }) => {
   const navigate = useNavigate();
   const [isRegister, setIsRegister] = useState(mode === 'register');
+
+  React.useEffect(() => {
+    document.title = isRegister ? "Register | CMPTNCY" : "Log In | CMPTNCY";
+  }, [isRegister]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   
@@ -114,7 +118,7 @@ const AuthPage = ({ mode = 'register' }) => {
                   <div className={styles.includesEyebrow}>FREE ACCOUNT INCLUDES</div>
                   <ul className={styles.includesList}>
                     <li>
-                      <strong>Full 38Q board diagnostic</strong> — all 7 units, exact marks weighting
+                      <strong>20Q board diagnostic</strong> — all 7 units, exact marks weighting
                     </li>
                     <li>
                       <strong>Readiness band + 7 unit scores</strong> — see exactly where you stand

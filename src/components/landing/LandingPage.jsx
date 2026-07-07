@@ -18,6 +18,10 @@ const Reveal = ({ children, delay = 0, className = '' }) => (
 );
 
 const LandingPage = () => {
+  React.useEffect(() => {
+    document.title = "CMPTNCY | CBSE Grade 10 Math Prep";
+  }, []);
+
   return (
     <div className={styles.pageWrapper}>
       {/* NAV */}
@@ -25,6 +29,8 @@ const LandingPage = () => {
 
       {/* HERO */}
       <section className={styles.heroWrap}>
+        <div className={styles.floatingShape1}></div>
+        <div className={styles.floatingShape2}></div>
         <div className={styles.container}>
           <div className={styles.hero}>
             <Reveal className={styles.heroLeft}>
@@ -34,38 +40,7 @@ const LandingPage = () => {
               <div className={styles.heroActions}>
                 <Link to="/diagnostic-intro" className={styles.heroBtn}>Ready? Let's find out for free.</Link>
               </div>
-              <div className={styles.heroNote}>No login required · 20 minutes · No credit card</div>
-            </Reveal>
-
-            <Reveal className={styles.heroRight} delay={1}>
-              <div className={styles.statRow}>
-                <div className={styles.stat}>
-                  <div className={styles.statVal}>38<em>Q</em></div>
-                  <div className={styles.statLabel}>Board diagnostic</div>
-                </div>
-                <div className={styles.stat}>
-                  <div className={styles.statVal}>95</div>
-                  <div className={styles.statLabel}>Concepts tracked</div>
-                </div>
-                <div className={styles.stat}>
-                  <div className={styles.statVal}><em>/</em>80</div>
-                  <div className={styles.statLabel}>Predicted score</div>
-                </div>
-              </div>
-              <div className={styles.trustRow}>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustDot}></div>
-                  <div className={styles.trustText}><strong>Mirrors the real board paper</strong> — every unit, every section, exact marks weighting</div>
-                </div>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustDot}></div>
-                  <div className={styles.trustText}><strong>Results in 20 minutes</strong> — no login, no credit card needed</div>
-                </div>
-                <div className={styles.trustItem}>
-                  <div className={styles.trustDot}></div>
-                  <div className={styles.trustText}><strong>Gap list with marks at risk</strong> — know exactly what to fix first</div>
-                </div>
-              </div>
+              <div className={styles.heroNote}>No login required · 20 questions · No credit card</div>
             </Reveal>
           </div>
         </div>
@@ -142,7 +117,7 @@ const LandingPage = () => {
                   <div className={styles.thSub}>Start here — no card, no commitment.</div>
                 </div>
                 <div className={styles.tf}>
-                  <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Full 38Q board diagnostic</div></div>
+                  <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>20Q board diagnostic</div></div>
                   <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Readiness band + 7 unit scores</div></div>
                   <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Topic retests — all chapters</div></div>
                   <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Streaks + chapter badges</div></div>
@@ -164,7 +139,7 @@ const LandingPage = () => {
                   <div className={styles.thSub}>See the full concept picture. Know exactly what to fix.</div>
                 </div>
                 <div className={styles.tf}>
-                  <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Everything in Free</div></div>
+                  <div className={styles.fr}><div className={`${styles.fck} ${styles.ckB}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#2F5496" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}>Everything in Free + Full 38Q diagnostic</div></div>
                   <div className={styles.fdiv}></div>
                   <div className={styles.fr}><div className={`${styles.fck} ${styles.ckG}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#8A5E00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}><span className={styles.go}>Concept heatmap</span> — all 95 concepts, colour coded</div></div>
                   <div className={styles.fr}><div className={`${styles.fck} ${styles.ckG}`}><svg viewBox="0 0 9 9" fill="none"><path d="M1.5 4.5l2 2 4-4" stroke="#8A5E00" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></div><div className={styles.ft}><span className={styles.go}>Gap list</span> — every weak concept ranked by marks at risk</div></div>
@@ -214,21 +189,83 @@ const LandingPage = () => {
               <p className={styles.parentSub}>Find out together. <strong>Nominate them for a free readiness check</strong> — 20 minutes, no login needed. You'll both see exactly where they stand.</p>
               <Link to="/parent-nomination" className={styles.parentBtn}>Nominate your child — it's free</Link>
               <div className={styles.parentNote}>No account needed for your child to take the test</div>
+
+              <div className={styles.nominationHorizontalWrap}>
+                <div className={styles.nominationBox}>
+                  <div className={styles.nominationNum}>01</div>
+                  <div className={styles.nominationText}>
+                    <strong>Enter details</strong>
+                    <br />You enter child's name & email — 30s, no account needed
+                  </div>
+                </div>
+                <div className={styles.nominationBox}>
+                  <div className={styles.nominationNum}>02</div>
+                  <div className={styles.nominationText}>
+                    <strong>Get diagnostic</strong>
+                    <br />They receive a link to the 20Q board diagnostic
+                  </div>
+                </div>
+                <div className={styles.nominationBox}>
+                  <div className={styles.nominationNum}>03</div>
+                  <div className={styles.nominationText}>
+                    <strong>See results</strong>
+                    <br />You both see the scores, band & exact gaps
+                  </div>
+                </div>
+              </div>
             </Reveal>
+
             <Reveal className={styles.parentRight} delay={1}>
-              <div className={styles.pcardLabel}>How nomination works</div>
-              <div className={styles.pcardSteps}>
-                <div className={styles.pstep}>
-                  <div className={styles.pstepNum}>01</div>
-                  <div className={styles.pstepText}><strong>You enter your child's name and email</strong> — takes 30 seconds, no account needed</div>
+              <div className={styles.reportHeader}>
+                <div>
+                  <div className={styles.reportTitle}>Diagnostic Report Preview</div>
+                  <div className={styles.reportStudent}>Arjun Sharma — Grade 10</div>
                 </div>
-                <div className={styles.pstep}>
-                  <div className={styles.pstepNum}>02</div>
-                  <div className={styles.pstepText}><strong>They get a link to the diagnostic</strong> — 38 questions, mirrors the real board paper</div>
+                <div className={styles.reportBadge}>Mathematics</div>
+              </div>
+
+              <div className={styles.reportScoreSection}>
+                <div className={styles.reportScoreCircle}>
+                  <div className={styles.reportScoreVal}>74%</div>
+                  <div className={styles.reportScoreLabel}>Score</div>
                 </div>
-                <div className={styles.pstep}>
-                  <div className={styles.pstepNum}>03</div>
-                  <div className={styles.pstepText}><strong>You both see the results</strong> — readiness band, unit scores, exact gaps with marks at risk</div>
+                <div className={styles.reportScoreMeta}>
+                  <div className={styles.reportScoreStatus}>Strong Readiness</div>
+                  <div className={styles.reportScoreDesc}>On track for 70+ but has critical topic gaps that will cost marks on the boards.</div>
+                </div>
+              </div>
+
+              <div className={styles.reportGrid}>
+                <div className={styles.reportGridTitle}>Unit Scores</div>
+                <div className={styles.reportRow}>
+                  <div className={styles.reportRowLabel}>Algebra & Number Systems</div>
+                  <div className={`${styles.reportRowVal} ${styles.valGood}`}>18/20</div>
+                </div>
+                <div className={styles.reportRow}>
+                  <div className={styles.reportRowLabel}>Trigonometry</div>
+                  <div className={`${styles.reportRowVal} ${styles.valMid}`}>8/12</div>
+                </div>
+                <div className={styles.reportRow}>
+                  <div className={styles.reportRowLabel}>Geometry & Mensuration</div>
+                  <div className={`${styles.reportRowVal} ${styles.valRisk}`}>9/15</div>
+                </div>
+              </div>
+
+              <div className={styles.reportGaps}>
+                <div className={styles.reportGapsTitle}>Top Marks-at-Risk Gaps</div>
+                <div className={styles.reportGapItem}>
+                  <div className={styles.reportGapName}>
+                    <span className={styles.reportGapWarningIcon}>⚠️</span>
+                    Quadratic Equations (Algebra)
+                  </div>
+                  <div className={styles.valRisk}><strong>-3 Marks</strong></div>
+                </div>
+                <div className={styles.reportGapItem}>
+                  <div className={styles.reportGapName}>
+                    <span className={styles.reportGapWarningIcon}>⚠️</span>
+                    Similar Triangles (Geometry)
+                  </div>
+                  <div className={styles.valRisk}><strong>-4 Marks</strong></div>
                 </div>
               </div>
             </Reveal>
@@ -244,7 +281,7 @@ const LandingPage = () => {
             <div className={styles.ftLinks}>
               <div className={styles.ftLink}>Privacy</div>
               <div className={styles.ftLink}>Terms</div>
-              <div className={styles.ftLink}>Contact</div>
+              <Link to="/contact" className={styles.ftLink}>Contact</Link>
             </div>
             <div className={styles.ftSlash}>/</div>
           </div>

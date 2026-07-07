@@ -238,10 +238,11 @@
 
 @media (max-width: 480px) {
   .page {
-    border-radius: 0;
-    box-shadow: none;
-    border: none;
-    background: transparent;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(31, 56, 100, 0.05);
+    background: var(--wh);
+    margin: 16px;
   }
 }
 

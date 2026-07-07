@@ -9,6 +9,7 @@ import DiagnosticIntro from './components/diagnostic/DiagnosticIntro';
 import DiagnosticTest from './components/diagnostic/DiagnosticTest';
 import DiagnosticResults from './components/diagnostic/DiagnosticResults';
 import ReviewAnswers from './components/diagnostic/ReviewAnswers';
+import ContactPage from './components/contact/ContactPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<AuthPage mode="login" />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/parent-nomination" element={<ParentPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/auth/callback" element={<AuthCallback />} />
         <Route path="/diagnostic-intro" element={<DiagnosticIntro />} />
         <Route path="/diagnostic" element={<DiagnosticTest />} />

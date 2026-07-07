@@ -49,6 +49,20 @@
   gap: 32px;
 }
 
+.mobileHide {
+  display: inline-block;
+}
+
+@media (max-width: 600px) {
+  .mobileHide {
+    display: none !important;
+  }
+  .navLinks {
+    gap: 16px;
+  }
+}
+
+
 .navLink {
   font-family: var(--font-mono);
   font-size: 11px;
